@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: black;
+  color: white;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  background-color: black;
+  filter: drop-shadow(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+header nav {
+  margin-top: 1%;
+}
+
+nav a {
+  font-size: 1.8rem;
+  color: white;
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+  color: #1effd6;
+  border-bottom: 3px solid #1effd6;
+}
+
+@media (max-width: 995px) {
+  nav {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    width: 40%;
+    border-left: 3px solid #1effd6;
+    border-bottom: 3px solid #1effd6;
+    border-bottom-left-radius: 2rem;
+    padding: 1rem solid;
+    background-color: #161616;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+  }
+
+  nav a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+
+  nav a:hover,
+  nav a.active {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.5rem solid #1effd6;
+  }
+}
+
+section {
+  padding: 2rem 9% 2rem;
+}
+
+.home {
+  min-height: 50vh;
+  margin-top: 20vh;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  margin-bottom: 5rem;
+}
+
+.animacion {
+  font-size: 6rem;
+}
+
+.animacion::after {
+  content: "_";
+  margin-left: 4px;
+  padding-bottom: 18px;
+  color: #d0d0d0;
+  font-family: "Courier new", "monospace";
+  animation: blink 1.2s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  95% {
+    opacity: 0;
+  }
+}
+
+.content h1 {
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.skills-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.skill-block {
+  margin-bottom: 2rem;
+}
+
+.skills h1 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.skills h4 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #e6e6e6;
+}
+
+.content h3 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.content p {
+  font-size: 1.6rem;
+}
+
+i {
+  font-size: 3rem;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  border: 0.2rem solid #1effd6;
+  border-radius: 50%;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.3s ease;
+  color: #1effd6;
+}
+
+.social-icons a:hover {
+  color: black;
+  transform: scale(1.3) translateY(-5px);
+  background-color: #1effd6;
+  box-shadow: 0 0 25px #1effd6;
+}
+
+.skills-icons {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.skills-icons i {
+  font-size: 3.2rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.25s ease;
+}
+
+.skills-icons i:hover {
+  transform: scale(1.2) translateY(-3px);
+}
+
+@media (max-width: 995px) {
+  .home {
+    margin-top: 10vh;
+    flex-direction: column;
+  }
+
+  .skills {
+    margin-top: 0vh;
+    flex-direction: column;
+  }
+
+  .content h3 {
+    font-size: 2.5rem;
+  }
+
+  .content h1 {
+    font-size: 4rem;
+  }
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////// */
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Bordes tipo tabla */
+.projects-side,
+.educacion {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 6px;
+}
+
+.educacion h1 {
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+}
+
+.educacion h3 {
+  font-size: 1.4rem;
+  margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
+  color: #e6e6e6;
+}
+
+.educacion h3:not(:first-of-type) {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  padding-top: 1.2rem;
+}
+
+.educacion p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #bfc6d1;
+  max-width: 65ch;
+}
+
+/* Títulos */
+.info-grid h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  border-left: 3px solid #b0b0b0;
+  padding-left: 1rem;
+}
+
+/* Subtítulos */
+.info-grid h3 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  color: #e6e6e6;
+}
+
+/* Texto */
+.info-grid p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #bfc6d1;
+}
+
+/* Proyectos */
+.project-card {
+  margin-bottom: 1rem;
+  border: 1px solid #8f8f8f;
+  padding: 1.8rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: #d0d0d0;
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  color: #bfc6d1;
+}
+
+.project-tech {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.project-tech i {
+  font-size: 2.4rem;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.badge {
+  font-size: 0.7rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid #8f8f8f;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2px);
+}
+
+.badge.blue {
+  border: 1px solid #3b6cff;
+  color: #8fa8ff;
+  box-shadow: 0 0 0 1px rgba(59, 108, 255, 0.2);
+}
+
+.badge.green {
+  border: 1px solid #3bbf7a;
+  color: #8fe3b3;
+  box-shadow: 0 0 0 1px rgba(59, 191, 122, 0.2);
+}
+
+.badge.red {
+  border: 1px solid #ff9a4d;
+  color: #ffbc9a;
+  box-shadow: 0 0 0 1px rgba(255, 77, 77, 0.2);
+}
+
+.badge.yellow {
+  border: 1px solid #edff4d;
+  color: #dcff8a;
+  box-shadow: 0 0 0 1px rgba(255, 184, 77, 0.2);
+}
+
+.badge.muted {
+  opacity: 0.7;
+}
+
+.project-learning {
+  font-size: 0.8rem;
+  color: #9fa6b2;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
