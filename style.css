@@ -382,3 +382,81 @@ i {
     grid-template-columns: 1fr;
   }
 }
+
+.contact-card {
+  margin-top: 2rem;
+  padding: 1rem 1.4rem;
+  max-width: 620px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+
+  box-shadow: 0 0 0 transparent;
+}
+
+.email-text {
+  font-family: monospace;
+  font-size: 1.05rem;
+  color: #a9b7ff;
+  white-space: nowrap;
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.btn {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #eaeaea;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.gmail-btn {
+  background: rgba(234, 67, 53, 0.15);
+  border-color: rgba(234, 67, 53, 0.4);
+  color: #ffb3ad;
+  text-decoration: none;
+}
+
+.gmail-btn:hover {
+  background: rgba(234, 67, 53, 0.25);
+}
+
+.copy-btn {
+  background: rgba(125, 155, 255, 0.15);
+  border-color: rgba(125, 155, 255, 0.4);
+  color: #b7c6ff;
+}
+
+.copy-btn:hover {
+  background: rgba(125, 155, 255, 0.25);
+}
+.copy-msg {
+  position: absolute;
+  margin-top: 4rem;
+  font-size: 0.85rem;
+  color: #6dffb2;
+}

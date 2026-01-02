@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Portfolio</title>
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="#home" class="active"> Inicio</a>
+            <a href="#home"> Inicio</a>
             <a href="#skills">Skills</a>
             <a href="#proyectos">Proyectos/Educacion</a>
             <a href="#contacto">Contacto</a>
@@ -176,14 +177,36 @@
 
     <section id="contacto" class="contacto">
         <h1>Contacto</h1>
-        <p>Estoy abierto a nuevas oportunidades y colaboraciones. No dudes en contactarme a través de los siguientes
-            medios:</p>
-        <ul>
-            <li>Email:
+        <p>
+            Actualmente estoy buscando mi primera experiencia laboral como programador.
+            Si estás interesado en colaborar o tenés alguna propuesta, no dudes en contactarme
+            a través de mi correo electrónico.
+        </p>
 
-                <footer>
-                    <p>© 2024 Lautaro Coton.</p>
-                </footer>
+        <div class="contact-card">
+            <span class="email-text" id="email">
+                lautarojoaquincoton@gmail.com
+            </span>
+
+            <div class="contact-buttons">
+                <button class="btn copy-btn" onclick="copiarEmail()">
+                    Copiar
+                </button>
+
+                <a class="btn gmail-btn"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=lautarojoaquincoton@gmail.com" target="_blank">
+                    Gmail
+                </a>
+            </div>
+
+            <span id="copy-msg" class="copy-msg"></span>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>© 2024 Lautaro Coton.</p>
+    </footer>
 </body>
 
 </html>
