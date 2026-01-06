@@ -90,7 +90,7 @@ nav a.active {
 }
 
 section {
-  padding: 2rem 9% 2rem;
+  padding: 1rem 10% 1rem;
 }
 
 .home {
@@ -206,34 +206,11 @@ i {
   transform: scale(1.2) translateY(-3px);
 }
 
-@media (max-width: 995px) {
-  .home {
-    margin-top: 10vh;
-    flex-direction: column;
-  }
-
-  .skills {
-    margin-top: 0vh;
-    flex-direction: column;
-  }
-
-  .content h3 {
-    font-size: 2.5rem;
-  }
-
-  .content h1 {
-    font-size: 4rem;
-  }
-}
-
-/* /////////////////////////////////////////////////////////////////////////////////// */
-
 .info-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-/* Bordes tipo tabla */
 .projects-side,
 .educacion {
   padding: 2rem;
@@ -330,6 +307,44 @@ i {
   gap: 0.6rem;
 }
 
+@media (max-width: 995px) {
+  section {
+    padding: 0 10% 0;
+  }
+
+  .home {
+    margin-top: 10vh;
+    flex-direction: column;
+    max-width: 90%;
+  }
+
+  .skills {
+    margin-top: 0vh;
+    flex-direction: column;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    padding-left: 1rem;
+  }
+
+  #proyectos {
+    justify-content: center;
+  }
+
+  .projects-side {
+    padding-left: 1rem;
+  }
+
+  .content h3 {
+    font-size: 2.5rem;
+  }
+
+  .content h1 {
+    font-size: 4rem;
+  }
+}
+
 .badge {
   font-size: 0.7rem;
   padding: 0.3rem 0.6rem;
@@ -383,30 +398,49 @@ i {
   }
 }
 
+.contacto {
+  max-width: 900px;
+}
+
+.contacto p {
+  font-size: 1.6rem;
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #cfcfcf;
+}
+
+/* CARD */
 .contact-card {
-  margin-top: 2rem;
-  padding: 1rem 1.4rem;
-  max-width: 620px;
+  position: relative;
+
+  width: fit-content;
+  max-width: 100%;
+  padding: 1.2rem 1.6rem;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1.2rem;
+  gap: 1.4rem;
 
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
 
-  box-shadow: 0 0 0 transparent;
+  backdrop-filter: blur(6px);
 }
 
+/* EMAIL */
 .email-text {
   font-family: monospace;
-  font-size: 1.05rem;
+  font-size: 1.4rem;
   color: #a9b7ff;
+
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+/* BOTONES */
 .contact-buttons {
   display: flex;
   gap: 0.6rem;
@@ -420,31 +454,25 @@ i {
   align-items: center;
   justify-content: center;
 
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid transparent;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.06);
 
   color: #eaeaea;
   cursor: pointer;
 
-  transition: all 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn i {
+  font-size: 1.4rem;
 }
 
 .btn:hover {
-  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
 }
 
-.gmail-btn {
-  background: rgba(234, 67, 53, 0.15);
-  border-color: rgba(234, 67, 53, 0.4);
-  color: #ffb3ad;
-  text-decoration: none;
-}
-
-.gmail-btn:hover {
-  background: rgba(234, 67, 53, 0.25);
-}
-
+/* COPY */
 .copy-btn {
   background: rgba(125, 155, 255, 0.15);
   border-color: rgba(125, 155, 255, 0.4);
@@ -454,9 +482,36 @@ i {
 .copy-btn:hover {
   background: rgba(125, 155, 255, 0.25);
 }
+
+/* GMAIL */
+.gmail-btn {
+  background: rgba(234, 67, 53, 0.15);
+  border-color: rgba(234, 67, 53, 0.35);
+  color: #ffb3ad;
+  text-decoration: none;
+}
+
+.gmail-btn:hover {
+  background: rgba(234, 67, 53, 0.25);
+}
+
+/* MENSAJE COPIADO */
 .copy-msg {
   position: absolute;
-  margin-top: 4rem;
-  font-size: 0.85rem;
+  bottom: -1.8rem;
+  left: 0;
+
+  font-size: 0.9rem;
   color: #6dffb2;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .contact-card {
+    flex-direction: column;
+  }
+
+  .email-text {
+    font-size: 1.3rem;
+  }
 }

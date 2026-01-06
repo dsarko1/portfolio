@@ -177,6 +177,7 @@
 
     <section id="contacto" class="contacto">
         <h1>Contacto</h1>
+
         <p>
             Actualmente estoy buscando mi primera experiencia laboral como programador.
             Si estás interesado en colaborar o tenés alguna propuesta, no dudes en contactarme
@@ -189,19 +190,21 @@
             </span>
 
             <div class="contact-buttons">
-                <button class="btn copy-btn" onclick="copiarEmail()">
-                    Copiar
+                <button class="btn copy-btn" onclick="copiarEmail()" aria-label="Copiar email">
+                    <i class="fa-regular fa-copy"></i>
                 </button>
 
                 <a class="btn gmail-btn"
-                    href="https://mail.google.com/mail/?view=cm&fs=1&to=lautarojoaquincoton@gmail.com" target="_blank">
-                    Gmail
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=lautarojoaquincoton@gmail.com" target="_blank"
+                    aria-label="Enviar mail">
+                    <i class="fa-regular fa-envelope"></i>
                 </a>
             </div>
 
             <span id="copy-msg" class="copy-msg"></span>
         </div>
     </section>
+
 
 
     <footer>
